@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarTesting.Class
 {
-    public partial class Engine // Класс двигателей
+    public abstract partial class Engine // Класс двигателей
     {
         //Я НАВЕРНОЕ понимаю что тут нужно будет использовать словать (но вы не написали его использовать)
 
@@ -24,17 +24,6 @@ namespace CarTesting.Class
 
             IdCount++;
         }
-
-        public string Start(Car car)
-        {
-            if(Type == EngineType.Work)
-            {
-                throw new WorkExeption("Двигатель рабочий");
-            }
-            else
-            {
-                throw new NotWorkExeption("Двигатель не рабочий",car);
-            }
-        }
+        public abstract void Test();
     }
 }

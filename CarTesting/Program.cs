@@ -12,11 +12,11 @@ namespace CarTesting
         static void Main(string[] args)
         {
 
-            Engine engineNumber1 = new Engine(Engine.EngineType.NotWork,"Дизельный двигатель");
+            Engine engineNumber1 = new EngineNotWork(Engine.EngineType.NotWork,"Дизельный двигатель");
             Car pyatyorka = new Car(1, engineNumber1);
 
             Console.WriteLine("");
-            Engine engineNumber2 = new Engine(Engine.EngineType.Work, "Литьевые батарейки");
+            Engine engineNumber2 = new EngineWork(Engine.EngineType.Work, "Литьевые батарейки");
             Car tesla = new Car(1, engineNumber2);
 
             Tester Davit = new Tester();

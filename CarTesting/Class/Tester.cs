@@ -12,16 +12,14 @@ namespace CarTesting.Class
         {
 			try
 			{
-                car.Test(car); 
+                car.Test();
+
+                Console.WriteLine("Двигатель рабочий");
             }
-			catch (NotWorkExeption nwe)
+			catch (NotWorkExeption)
 			{
-				Console.WriteLine(nwe.Message);
+                return;
 			}
-            catch (WorkExeption we)
-            {
-                Console.WriteLine(we.Message);
-            }
         }
     }
 }

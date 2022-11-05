@@ -17,10 +17,9 @@ namespace CarTesting.Class
             Engine = engine;
         }
 
-        public string Test(Car car)
+        public void Test()
         {
-            car = new Car(Id, Engine);
-            return Engine.Start(car);
+            Engine.Test();
         }
     }
 }

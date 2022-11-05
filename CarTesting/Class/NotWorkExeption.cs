@@ -8,10 +8,9 @@ namespace CarTesting.Class
 {
     public class NotWorkExeption : ArgumentException
     {
-        Car Car { get; }
-        public NotWorkExeption(string message,Car car) : base(message)
+        public NotWorkExeption(Engine engine,DateTime date)
         {
-            Console.WriteLine($"Дата и время проведение тестирования {System.DateTime.Now}\nТестироваемый двигатель:  {car.Engine.Name}");
+            Console.WriteLine($"Дата и время проведение тестирования {date}\nТестироваемый двигатель:  {engine.Name}\nДвигатель не рабочий");
         }
     }
 
