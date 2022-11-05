@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,15 +25,15 @@ namespace CarTesting.Class
             IdCount++;
         }
 
-        public string Start()
+        public string Start(Car car)
         {
             if(Type == EngineType.Work)
             {
-                return "Двигатель рабочий";
+                throw new WorkExeption("Двигатель рабочий");
             }
             else
             {
-                return "Двигатель не рабочий";
+                throw new NotWorkExeption("Двигатель не рабочий",car);
             }
         }
     }

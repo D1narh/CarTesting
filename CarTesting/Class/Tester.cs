@@ -12,14 +12,7 @@ namespace CarTesting.Class
         {
 			try
 			{
-				if (car.Test() == "Двигатель рабочий")
-				{
-                    throw new WorkExeption("Двигатель рабочий");
-                }
-                else
-                {
-                    throw new NotWorkExeption("Двигатель не рабочий",car);
-                }
+                car.Test(car); 
             }
 			catch (NotWorkExeption nwe)
 			{

@@ -16,9 +16,11 @@ namespace CarTesting.Class
             Id = id;
             Engine = engine;
         }
-        public string Test()
+
+        public string Test(Car car)
         {
-           return Engine.Start();
+            car = new Car(Id, Engine);
+            return Engine.Start(car);
         }
     }
 }
