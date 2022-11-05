@@ -14,21 +14,21 @@ namespace CarTesting.Class
 			{
 				if (car.Test() == "Двигатель рабочий")
 				{
-                    Console.WriteLine("Двигатель рабочий");
-                    Console.WriteLine("Тестирование прошло успешно");
+                    throw new WorkExeption("Двигатель рабочий");
                 }
                 else
                 {
-                    throw new ArgumentException($"Двигатель в машине не рабочий. Дата и время проведение тестирования {System.DateTime.Now}"+
-                        $"\nТестироваемый двигатель:  {car.Engine.Name}");
+                    throw new NotWorkExeption("Двигатель не рабочий",car);
                 }
-
             }
-			catch (Exception ex)
+			catch (NotWorkExeption nwe)
 			{
-
-				Console.WriteLine(ex.Message);
+				Console.WriteLine(nwe.Message);
 			}
+            catch (WorkExeption we)
+            {
+                Console.WriteLine(we.Message);
+            }
         }
     }
 }

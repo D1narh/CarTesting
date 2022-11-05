@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="Class\Car.cs" />
     <Compile Include="Class\Engine.cs" />
+    <Compile Include="Class\NotWorkExeption.cs" />
     <Compile Include="Class\Tester.cs" />
     <Compile Include="Class\EngineType.cs" />
+    <Compile Include="Class\WorkExeption.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
